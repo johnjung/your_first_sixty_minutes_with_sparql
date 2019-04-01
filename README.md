@@ -2,9 +2,7 @@
 
 [![A screensaver video featuring a sparkly discoball.](https://img.youtube.com/vi/zymRNmdzF2k/0.jpg)](https://www.youtube.com/watch?v=zymRNmdzF2k)
 
-*Something sparkly.*
-
-These are notes from a one-hour workshop on October 10, 2018 at the University of Chicago Library. 
+These notes are from a one-hour workshop on SPARQL, on October 10, 2018 at the University of Chicago Library. 
  
 [“SPARQL in 11 Minutes” is a good, quick introduction to SPARQL](https://www.youtube.com/watch?v=FvGndkpa4K0)
 
