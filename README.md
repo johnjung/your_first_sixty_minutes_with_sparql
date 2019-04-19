@@ -1,8 +1,8 @@
 # Your First Sixty Minutes with SPARQL
 
-[![A screensaver video featuring a sparkly discoball.](https://img.youtube.com/vi/zymRNmdzF2k/0.jpg)](https://www.youtube.com/watch?v=zymRNmdzF2k)
-
 These notes are from a one-hour workshop on getting started with SPARQL.
+
+[![A screensaver video featuring a sparkly discoball.](https://img.youtube.com/vi/zymRNmdzF2k/0.jpg)](https://www.youtube.com/watch?v=zymRNmdzF2k)
  
 [“SPARQL in 11 Minutes” is a good, quick introduction to SPARQL](https://www.youtube.com/watch?v=FvGndkpa4K0)
 
