@@ -110,8 +110,17 @@ WHERE {
 ## MarkLogic
 
 The library's MarkLogic server includes a SPARQL endpoint too.
+
+1. Retrieve any ten triples from the system:
+```sparql
+SELECT *
+WHERE {
+  ?s ?p ?o .
+}
+LIMIT 10
+```
  
-1. Get some triples from the system:
+2. Get some predicates:
 ```sparql 
 SELECT DISTINCT ?p
 WHERE {
@@ -119,8 +128,18 @@ WHERE {
 }
 LIMIT 10
 ```
+
+3. Get some types from the system:
+
+```sparql
+SELECT DISTINCT ?o
+WHERE {
+  ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o .
+}
+LIMIT 10
+```
  
-2. Get some information about instances:
+4. Get some information about instances:
 ```sparql
 SELECT DISTINCT ?instance ?p ?o
 WHERE {
@@ -130,7 +149,7 @@ WHERE {
 LIMIT 100
 ```
  
-3. Get some information about a given Share-VDE instance:
+5. Get some information about a given Share-VDE instance:
 ```sparql 
 SELECT *
 WHERE {
@@ -139,7 +158,7 @@ WHERE {
 LIMIT 100
 ```
 
-4. I want to learn something about the agents for a specific instance:
+6. I want to learn something about the agents for a specific instance:
 ```sparql 
 SELECT *
 WHERE {
@@ -148,7 +167,7 @@ WHERE {
 LIMIT 100
 ```
  
-5. I want to see some agents:
+7. I want to see some agents:
 ```sparql 
 SELECT *
 WHERE {
@@ -158,7 +177,7 @@ WHERE {
 LIMIT 100
 ```
  
-6. I want to learn something about extents. If I take the extent URI for this
+8. I want to learn something about extents. If I take the extent URI for this
 and move it from subject to object in a triple, I can see what instances share
 an extent. I see that instances that don’t have anything to do with each other,
 other than the fact that they share a height and page count. 
@@ -170,7 +189,7 @@ WHERE {
 LIMIT 10
 ```
  
-7. You can do the same thing with notes. Then, take one of the note URIs and
+9. You can do the same thing with notes. Then, take one of the note URIs and
 look for triples where that note appears in the subject or object of triples in
 the system:
 ```sparql 
@@ -182,7 +201,7 @@ WHERE {
 LIMIT 100
 ```
  
-8. Get works for a set of instances:
+10. Get works for a set of instances:
 ```sparql 
 SELECT DISTINCT ?work
    WHERE {
@@ -220,7 +239,7 @@ SELECT DISTINCT ?work
    }
 ```
  
-8. Then, get the instances for one or more works:
+11. Then, get the instances for one or more works:
 ```sparql 
 SELECT DISTINCT ?instance
    WHERE {
