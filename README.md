@@ -177,19 +177,7 @@ WHERE {
 LIMIT 100
 ```
  
-8. I want to learn something about extents. If I take the extent URI for this
-and move it from subject to object in a triple, I can see what instances share
-an extent. I see that instances that don’t have anything to do with each other,
-other than the fact that they share a height and page count. 
-```sparql 
-SELECT *
-WHERE {
-<http://share-vde.org/sharevde/rdfBibframe2/Instance/UCHICAGO1000046> <http://id.loc.gov/ontologies/bibframe/extent> ?extent .
-}
-LIMIT 10
-```
- 
-9. You can do the same thing with notes. Then, take one of the note URIs and
+8. You can do the same thing with notes. Then, take one of the note URIs and
 look for triples where that note appears in the subject or object of triples in
 the system:
 ```sparql 
@@ -201,7 +189,7 @@ WHERE {
 LIMIT 100
 ```
  
-10. Get works for a set of instances:
+9. Get works for a set of instances:
 ```sparql 
 SELECT DISTINCT ?work
    WHERE {
@@ -239,13 +227,13 @@ SELECT DISTINCT ?work
    }
 ```
  
-11. Then, get the instances for one or more works:
+10. Then, get the instances for one or more works:
 ```sparql 
 SELECT DISTINCT ?instance
-   WHERE {
-     ?instance <http://id.loc.gov/ontologies/bibframe/instanceOf> ?work .
-     FILTER (?work IN (<http://share-vde.org/sharevde/rdfBibframe2/Work/23955921>))
-   }
+WHERE {
+  ?instance <http://id.loc.gov/ontologies/bibframe/instanceOf> ?work .
+  FILTER (?work IN (<http://share-vde.org/sharevde/rdfBibframe2/Work/23955921>))
+}
 ```
  
 ## More Resources
