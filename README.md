@@ -128,37 +128,13 @@ WHERE {
 }
 LIMIT 10
 ```
-
-3. Get some types from the system:
-
-```sparql
-SELECT DISTINCT ?o
-WHERE {
-  ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o .
-}
-LIMIT 10
-```
  
-4. Get some information about instances:
+3. Get some information about instances:
 ```sparql
-SELECT DISTINCT ?instance ?p ?o
-WHERE {
-  ?instance <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Instance> .
-  ?instance ?p ?o . 
-}
-LIMIT 100
-```
- 
-5. Get some information about a given Share-VDE instance:
-```sparql 
-SELECT *
-WHERE {
-  <http://share-vde.org/sharevde/rdfBibframe2/Instance/UCHICAGO1000046> ?p ?o .
-}
-LIMIT 100
+DESCRIBE <http://share-vde.org/sharevde/rdfBibframe2/Instance/UCHICAGO1>
 ```
 
-6. I want to learn something about the agents for a specific instance:
+4. I want to learn something about the agents for a specific instance:
 ```sparql 
 SELECT *
 WHERE {
@@ -167,7 +143,7 @@ WHERE {
 LIMIT 100
 ```
  
-7. I want to see some agents:
+5. I want to see some agents:
 ```sparql 
 SELECT *
 WHERE {
@@ -177,7 +153,7 @@ WHERE {
 LIMIT 100
 ```
  
-8. You can do the same thing with notes. Then, take one of the note URIs and
+6. You can do the same thing with notes. Then, take one of the note URIs and
 look for triples where that note appears in the subject or object of triples in
 the system:
 ```sparql 
@@ -189,7 +165,7 @@ WHERE {
 LIMIT 100
 ```
  
-9. Get works for a set of instances:
+7. Get works for a set of instances:
 ```sparql 
 SELECT DISTINCT ?work
    WHERE {
@@ -227,7 +203,7 @@ SELECT DISTINCT ?work
    }
 ```
  
-10. Then, get the instances for one or more works:
+8. Then, get the instances for one or more works:
 ```sparql 
 SELECT DISTINCT ?instance
 WHERE {
